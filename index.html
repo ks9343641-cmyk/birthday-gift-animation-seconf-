@@ -378,5 +378,21 @@
       $(".letter__border").slideUp();
     });
   </script>
+  
+<audio id="birthdaySong" autoplay loop>
+    <source src="assets/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const song = document.getElementById("birthdaySong");
+
+    song.volume = 0.7;
+
+    window.addEventListener("load", function () {
+        song.play().catch(function () {
+            console.log("Browser ne autoplay block kar diya.");
+        });
+    });
+</script>
 </body>
 </html>
